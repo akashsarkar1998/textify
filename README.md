@@ -46,7 +46,7 @@ This is a Django web application that allows users to perform various text analy
 ![screencapture-127-0-0-1-8000-analyze-2024-05-06-17_57_06](https://github.com/akashsarkar1998/textify/assets/32842719/3e4830c4-5c06-4107-a3fd-d1df90406231)
 ![screencapture-127-0-0-1-8000-analyze-2024-05-06-17_57_25](https://github.com/akashsarkar1998/textify/assets/32842719/b7a91390-b50b-421e-8ce3-b6ec7c789b49)
 ![screencapture-127-0-0-1-8000-analyze-2024-05-06-17_57_43](https://github.com/akashsarkar1998/textify/assets/32842719/d851e44b-d402-4846-b66e-92132d9954dc)
-![screencapture-127-0-0-1-8000-analyze-2024-05-06-17_58_00](https://github.com/akashsarkar1998/textify/assets/32842719/097943be-70bb-4f20-a3b9-d37198a07b79)
+
 
 ## Author
 
