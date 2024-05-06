@@ -1,0 +1,35 @@
+<DOCTYPE html>
+    <html lang='en'>
+        <head>
+            <meta charset="UTF-8">
+            <title>Text Utilization</title>
+            </head>
+        <body>
+            <h1>Welcome to our Text Analyzer...</h1>
+            <h2> Enter your Text Below:</h2>
+            <form action="/analyze/" method="GET">
+                <textarea placeholder='Type here...' name="Your_Input" style="margin: 0px; width: 517px; height: 195px;"></textarea>
+<!-- When the form is submitted, the data entered into this textarea will be sent to the server with the name specified 
+    in the name attribute. This allows you to identify and process the textarea input on the server-side. -->
+                <br>
+                <input type="checkbox" name="remove_punctuation"> Remove Punctuations <br>
+                <input type="checkbox" name="capitalize"> Upper Case <br>
+                <input type="checkbox" name="newlineremover"> New Line Remove <br>
+                <input type="checkbox" name="extraspaceremover"> Extra Space Remover <br>
+                <input type="checkbox" name="charcount"> Character Count <br>
+                <button type="submit"> Analyze Text </button>
+                <button type="reset"> reset </button>
+            </form>
+            <!-- <p>Go to <a href='removepunc'>Remove Punctuation</a></p> 
+            <p>Go to <a href='capitalizefirst'>Capitalize First</a></p>
+            <p>Go to <a href='newlineremove'>New Line Remove</a></p> 
+            <p>Go to <a href='spaceremover'>Space Remover</a></p>
+            <p>Go to <a href='charcount'>Character Count</a></p> -->
+
+            <footer>
+                <p>
+                    This is {{name}} and I am from {{place}}
+                </p>    
+            </footer>
+        </body>
+    </html>
