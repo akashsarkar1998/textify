@@ -37,15 +37,19 @@ This is a Django web application that allows users to perform various text analy
 - Rake (for keyword extraction)
 
 ## Some Usage:
+![screencapture-127-0-0-1-8000-analyze-2024-05-07-13_17_24](https://github.com/akashsarkar1998/textify/assets/32842719/d7fe1ceb-897a-498c-be83-2d3a6bac08d3)
+![screencapture-127-0-0-1-8000-2024-05-07-13_18_34](https://github.com/akashsarkar1998/textify/assets/32842719/e2c041c9-86be-49f9-8453-0851a1192f9a)
+![screencapture-127-0-0-1-8000-aboutme-2024-05-06-18_00_11](https://github.com/akashsarkar1998/textify/assets/32842719/0d37d6c5-5b96-4bdd-bf86-90a9fe7de3d8)
 
-![screencapture-127-0-0-1-8000-analyze-2024-05-06-17_59_57](https://github.com/akashsarkar1998/textify/assets/32842719/a4b8be62-095f-4208-9bd0-51969b2edcd3)
-![screencapture-127-0-0-1-8000-aboutme-2024-05-06-18_00_11](https://github.com/akashsarkar1998/textify/assets/32842719/6f387faf-2f9f-485e-ad73-4d6278b61f4a)
-![screencapture-127-0-0-1-8000-2024-05-06-17_53_07](https://github.com/akashsarkar1998/textify/assets/32842719/a8034a51-493c-45d4-9e1d-d2bf300cf953)
-![screencapture-127-0-0-1-8000-analyze-2024-05-06-17_54_33](https://github.com/akashsarkar1998/textify/assets/32842719/7029aaca-858f-4173-a31c-da7b5eb67a08)
-![screencapture-127-0-0-1-8000-analyze-2024-05-06-17_54_48](https://github.com/akashsarkar1998/textify/assets/32842719/530cc22b-0bc0-4fc9-8826-a0fb15bab5a2)
-![screencapture-127-0-0-1-8000-analyze-2024-05-06-17_57_06](https://github.com/akashsarkar1998/textify/assets/32842719/3e4830c4-5c06-4107-a3fd-d1df90406231)
-![screencapture-127-0-0-1-8000-analyze-2024-05-06-17_57_25](https://github.com/akashsarkar1998/textify/assets/32842719/b7a91390-b50b-421e-8ce3-b6ec7c789b49)
-![screencapture-127-0-0-1-8000-analyze-2024-05-06-17_57_43](https://github.com/akashsarkar1998/textify/assets/32842719/d851e44b-d402-4846-b66e-92132d9954dc)
+![screencapture-127-0-0-1-8000-analyze-2024-05-07-13_18_47](https://github.com/akashsarkar1998/textify/assets/32842719/739e74f1-0d01-489c-a3ed-fa348dc5bf8f)
+![screencapture-127-0-0-1-8000-2024-05-07-13_21_02](https://github.com/akashsarkar1998/textify/assets/32842719/0fc77467-36c9-4ef7-bc52-f29aa1310d3f)
+![screencapture-127-0-0-1-8000-analyze-2024-05-07-13_21_14](https://github.com/akashsarkar1998/textify/assets/32842719/bac2ea40-99a5-4a15-bcc5-e4d3ba6c86c4)
+![screencapture-127-0-0-1-8000-analyze-2024-05-07-13_21_14 (1)](https://github.com/akashsarkar1998/textify/assets/32842719/ac7d9d9a-67ad-4cc2-bcd3-48731d432e87)
+![screencapture-127-0-0-1-8000-2024-05-07-13_13_27](https://github.com/akashsarkar1998/textify/assets/32842719/f7a46aa6-7735-4031-bb5d-6a1f78e69116)
+![screencapture-127-0-0-1-8000-2024-05-07-13_16_53](https://github.com/akashsarkar1998/textify/assets/32842719/db431204-567d-4180-8f03-13db96d883fe)
+
+
+
 
 
 ## Author
