@@ -95,7 +95,7 @@ def analyze(request):
             analyzed_text = analyzed_text.replace(word, spell.correction(word))
             
     elif removepunc != 'on' and capitalize != 'on' and newlineremover != 'on' and small != 'on' and extraspaceremover != 'on' and charcount != 'on' and sentencecount != 'on' and paragraphcount != 'on' and keywordextraction != 'on' and ner != 'on' and palindrome != 'on' and spellchecker != 'on':
-        return HttpResponse('<h1>Error:</h1> <p> You have to select an operation. Please try again.</p> <p>Go back to <a href="/">HOME</a></p>')
+        return render(request, 'error.html')
     
     params = {'purpose': 'Text Analysis', 'analyzed_text': analyzed_text}
     return render(request, 'analyze2.html', params)
