@@ -20,81 +20,86 @@ def extract_keywords(text):
 
 def index(request):
     param = {'name':'Akash Sarkar', 'place': 'India'}
-    return render(request, 'index2.html', param)
+    return render(request, 'index2.html', param)    
 
 def analyze(request):
-    text = request.GET.get('Your_Input', 'default')
+    text = request.POST.get('Your_Input', 'default')
     analyzed_text = text
-    removepunc = request.GET.get('remove_punctuation', 'off')
-    capitalize = request.GET.get('capitalize', 'off')
-    small = request.GET.get('small', 'off')
-    newlineremover = request.GET.get('newlineremover', 'off')
-    extraspaceremover = request.GET.get('extraspaceremover', 'off')
-    charcount = request.GET.get('charcount', 'off')
-    sentencecount = request.GET.get('sentencecount', 'off')
-    paragraphcount = request.GET.get('paragraphcount', 'off')
-    keywordextraction = request.GET.get('keywordextraction', 'off')
-    ner = request.GET.get('ner', 'off')
-    palindrome = request.GET.get('palindrome', 'off')
-    spellchecker = request.GET.get('spellchecker', 'off')
+    removepunc = request.POST.get('remove_punctuation', 'off')
+    capitalize = request.POST.get('capitalize', 'off')
+    small = request.POST.get('small', 'off')
+    newlineremover = request.POST.get('newlineremover', 'off')
+    extraspaceremover = request.POST.get('extraspaceremover', 'off')
+    charcount = request.POST.get('charcount', 'off')
+    sentencecount = request.POST.get('sentencecount', 'off')
+    paragraphcount = request.POST.get('paragraphcount', 'off')
+    keywordextraction = request.POST.get('keywordextraction', 'off')
+    ner = request.POST.get('ner', 'off')
+    palindrome = request.POST.get('palindrome', 'off')
+    spellchecker = request.POST.get('spellchecker', 'off')
     spell = SpellChecker()
- 
  
     if removepunc == 'on':
         punctuations = ''' , . ! ? : ; ' " ( ) [ ] { } - — _ / \ * + = < > % $ # @ & '''
         analyzed_text = ''.join(char for char in analyzed_text if char not in punctuations)
             
-    if capitalize == 'on':
+    elif capitalize == 'on':
         analyzed_text = analyzed_text.upper()
     
-    if small == 'on':
+    elif small == 'on':
         analyzed_text = analyzed_text.lower()
     
-    if newlineremover == 'on':
-        analyzed_text = analyzed_text.replace('\n', '')
-    
-    if extraspaceremover == 'on':
+    elif newlineremover == 'on':
+        analyzed_text = ''
+        for char in text:
+            if char != '\n' and char != '\r':
+                analyzed_text += char    
+                
+    elif extraspaceremover == 'on':
         analyzed_text = ' '.join(analyzed_text.split())
     
-    if charcount == 'on':
+    elif charcount == 'on':
         charnumber = len(analyzed_text.replace(" ", ''))
         analyzed_text += f'\nTotal Character Count: {charnumber}'
     
     # Check sentence count before modifying the text
-    if sentencecount == 'on':
+    elif sentencecount == 'on':
         sentencecount = analyzed_text.count('.') + analyzed_text.count('!') + analyzed_text.count('?')
         analyzed_text += f'\nSentence Count: {sentencecount}'
     
-    if paragraphcount == 'on':
+    elif paragraphcount == 'on':
         paragraphs = analyzed_text.split('\n\n')
         paragraphcount = len(paragraphs)
         analyzed_text += f'\nParagraph Count: {paragraphcount}'
     
-    if keywordextraction == 'on':
+    elif keywordextraction == 'on':
         keywords = extract_keywords(analyzed_text)
         analyzed_text += f'\nKeywords: {keywords}'
     
-    if ner == 'on':
+    elif ner == 'on':
         doc = nlp(analyzed_text)
         entities = [(entity.text, entity.label_) for entity in doc.ents]
         analyzed_text += '\nNamed Entities:\n'
         analyzed_text += "\n".join([f"{entity[0]}: {entity[1]}" for entity in entities])
     
     # Check palindrome before modifying the text
-    if palindrome == 'on':
+    elif palindrome == 'on':
         if analyzed_text.lower().replace(" ", '') == analyzed_text.lower().replace(" ", '')[::-1]:
             analyzed_text += '\nYour text is Palindrome'
         else:
             analyzed_text += '\nYour text is not a Palindrome'
     
-    if spellchecker == 'on':
+    elif spellchecker == 'on':
         misspelled = spell.unknown(analyzed_text.split())
         for word in misspelled:
             analyzed_text = analyzed_text.replace(word, spell.correction(word))
+            
+    elif removepunc != 'on' and capitalize != 'on' and newlineremover != 'on' and small != 'on' and extraspaceremover != 'on' and charcount != 'on' and sentencecount != 'on' and paragraphcount != 'on' and keywordextraction != 'on' and ner != 'on' and palindrome != 'on' and spellchecker != 'on':
+        return HttpResponse('<h1>Error:</h1> <p> You have to select an operation. Please try again.</p> <p>Go back to <a href="/">HOME</a></p>')
     
     params = {'purpose': 'Text Analysis', 'analyzed_text': analyzed_text}
     return render(request, 'analyze2.html', params)
-
+    
 def aboutme(request):
     return render(request, 'aboutme.html')
 
