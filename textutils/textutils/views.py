@@ -24,6 +24,8 @@ def index(request):
 
 def analyze(request):
     text = request.POST.get('Your_Input', 'default')
+    if not text:
+        return render(request, 'error.html')
     analyzed_text = text
     removepunc = request.POST.get('remove_punctuation', 'off')
     capitalize = request.POST.get('capitalize', 'off')
